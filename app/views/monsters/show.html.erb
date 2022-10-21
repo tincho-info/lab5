@@ -1,1 +1,3 @@
-<%# Update me %><%= @monster.inspect %>
+<h1><%= @monster.name %></h1>
+<p> <%= @monster.description %></p>
+<%= link_to "Editar", edit_monster_path(@monster), class: "btn btn-outline-primary" %>
