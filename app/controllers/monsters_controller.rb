@@ -12,7 +12,7 @@ class MonstersController < ApplicationController
   def create
     @monster = Monster.new(monster_params)
     if @monster.save
-       redirect_to @monster, notice: "Se ha creado el Monstruo correctamente!"
+       redirect_to @monster, notice: "La creaste nice gil!"
     else
        render :new
     end
@@ -20,7 +20,7 @@ class MonstersController < ApplicationController
   def destroy
     @monster = Monster.find(params[:id])
     @monster.destroy
-    redirect_to monsters_path, notice: "Se ha eliminado el Monstruo correctamente!"
+    redirect_to monsters_path, notice: "Lo eliminaste nice gil!"
   end
   def edit
     @monster = Monster.find(params[:id])
@@ -28,7 +28,7 @@ class MonstersController < ApplicationController
   def update
     @monster = Monster.find(params[:id])
     if @monster.update(monster_params)
-      redirect_to @monster, notice: "Se ha actualizado el Monstruo correctamente!"
+      redirect_to @monster, notice: "Lo actualizaste nice gil!"
     else
       render :edit
     end
